@@ -1,0 +1,13 @@
+#build and run locally
+
+docker build -t halld-offline .
+docker run -d --name halld-offline -p 8080:80 halld-offline
+# browse http://localhost:8080/
+
+# export to other machines
+docker save halld-offline | gzip > halld-offline.tar.gz
+
+# on another machine:
+docker load < halld-offline.tar.gz
+docker run -d -p 8080:80 halld-offline
+# browse http://localhost:8080/
