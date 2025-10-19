@@ -1,6 +1,6 @@
-FROM nginx:alpine
+FROM docker.io/library/nginx:alpine
+
 COPY site/ /usr/share/nginx/html/
-# Harden: never execute scripts; we're just serving static files
 RUN adduser -D -H -s /sbin/nologin web && \
     chown -R web:web /usr/share/nginx/html && \
     sed -i 's/user  nginx;/user  web;/' /etc/nginx/nginx.conf
