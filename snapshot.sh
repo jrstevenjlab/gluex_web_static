@@ -77,11 +77,11 @@ mirror_one () {
     --server-response
     --tries="$RETRIES"
     --timeout="$TIMEOUT"
-    #--user=username 
-    #--password=password
+    --user=username
+    --password=password
     $ROBOTS_OPT
     # Skip obviously dynamic endpoints that won't work offline anyway (optional but recommended)
-    --reject-regex 'logout|action=edit|action=submit|Special:|search\.cgi|/cgi-bin/|ShowCalendar|ListEvents'
+    --reject-regex 'logout|action=edit|action=submit|Special:|search\.cgi|/cgi-bin/|ShowCalendar|ListEvents|RetrieveArchive'
   )
 
   # Cookies for private areas (wiki-private/doc-private)
