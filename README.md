@@ -52,6 +52,26 @@ The script creates:
 2. A log file for each URL under `site/`.
 3. A small landing page at `site/index.html`.
 
+## Make a Docker image for offline use
+
+After you have built the snapshot into `site/`, you can package it into a Docker image and move that image to another machine:
+
+```bash
+# Build the offline image from the mirrored site
+docker build -t halld-offline .
+
+# Save it as a portable archive
+docker save halld-offline | gzip > halld-offline.tar.gz
+
+# On the offline machine, load and run it
+docker load < halld-offline.tar.gz
+docker run -d -p 8080:80 halld-offline
+```
+
+Then browse the mirrored site at `http://localhost:8080/`.
+
+The image is built from [Dockerfile](Dockerfile), which serves the contents of `site/` with nginx.
+
 ## Notes
 
 The script is configured to respect `robots.txt` by default. If you have permission to crawl a site and need to override that behavior, set `OBEY_ROBOTS=0`.
