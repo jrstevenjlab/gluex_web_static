@@ -77,8 +77,8 @@ mirror_one () {
     --server-response
     --tries="$RETRIES"
     --timeout="$TIMEOUT"
-    --user=username
-    --password=password
+    --user=jrsteven
+    --password=~Z3sjz3sj6
     $ROBOTS_OPT
     # Skip obviously dynamic endpoints that won't work offline anyway (optional but recommended)
     --reject-regex 'logout|action=edit|action=submit|Special:|search\.cgi|/cgi-bin/|ShowCalendar|ListEvents|RetrieveArchive'
