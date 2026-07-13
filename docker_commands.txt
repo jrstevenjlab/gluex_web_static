@@ -6,5 +6,11 @@ docker save halld-offline | gzip > halld-offline.tar.gz
 
 # on other machine:
 docker load < halld-offline.tar.gz
-docker run -d -p 8080:80 halld-offline
-# browse http://localhost:8080/
+docker run -d -p 8080:80 localhost/halld-offline
+
+# view the webpages in your local browser 
+# http://localhost:8080/halldweb.jlab.org/
+# http://localhost:8080/halldweb.jlab.org/wiki-private/index.php/Main_Page.html
+# http://localhost:8080/halldweb.jlab.org/wiki/index.php/Main_Page.html
+# http://localhost:8080/halldweb.jlab.org/doc-private/DocDB/DocumentDatabase
+# http://localhost:8080/halldweb.jlab.org/doc-public/DocDB/DocumentDatabase
