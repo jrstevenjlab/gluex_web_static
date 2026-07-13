@@ -1,1 +1,5 @@
 https://halldweb.jlab.org/wiki-private/index.php
+https://halldweb.jlab.org/hdops/wiki/index.php
+https://halldweb.jlab.org/wiki/index.php
+https://halldweb.jlab.org/doc-public/DocDB/DocumentDatabase
+https://halldweb.jlab.org/doc-private/DocDB/DocumentDatabase
